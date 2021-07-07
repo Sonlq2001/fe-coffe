@@ -1,0 +1,14 @@
+@mixin box($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin row_header() {
+	text-align: center;
+
+	&__key {
+		font-size: 10.6rem;
+		font-weight: bold;
+		font-family: Josefin_Sans_bold;
+	}
+}

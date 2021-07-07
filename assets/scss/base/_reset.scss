@@ -1,0 +1,39 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	line-height: 1.6rem;
+	box-sizing: border-box;
+	font-family: Josefin_Sans_bold;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $black-color;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+input,
+textarea {
+	border: none;
+	outline: none;
+}
+
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}

@@ -1,0 +1,17 @@
+// abstracts
+@import "./abstracts/variable";
+@import "./abstracts/mixin";
+
+// base
+@import "./base/reset";
+@import "./base/typography";
+
+// layout
+@import "./layouts/header";
+@import "./layouts/footer";
+
+// component
+@import "./components/slide";
+
+// page
+@import "./pages/home";

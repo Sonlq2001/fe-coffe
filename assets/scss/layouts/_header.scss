@@ -1,0 +1,95 @@
+.header {
+	background-color: $main-color;
+	width: 100%;
+	height: 8.6rem;
+
+	.header-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	.header-nav {
+		margin-left: 11rem;
+		.header-list {
+			display: flex;
+
+			.header-item {
+				&__link {
+					text-transform: uppercase;
+					font-size: 1.6rem;
+					color: $black-color;
+					padding-left: 1rem;
+					font-family: Arial, Helvetica, sans-serif;
+				}
+			}
+
+			.header-item + .header-item {
+				border-left: 1px solid $black-color;
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	.header-action {
+		display: flex;
+		align-items: center;
+
+		.header-cart {
+			@include box(4.4rem, 4.4rem);
+			line-height: 4.4rem;
+			text-align: center;
+			background-color: $cart-color;
+			border-radius: 100%;
+
+			&__img {
+				@include box(3rem, 2.6rem);
+			}
+		}
+
+		.header-contact {
+			@include box(19.4rem, 6.6rem);
+			background-color: $contact-color;
+			text-align: center;
+			margin-left: 1.3rem;
+			border-radius: 2rem;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			padding: 0 1rem;
+
+			&__phone {
+				background-color: $white-color;
+				line-height: 0;
+				padding: 1rem;
+				color: $contact-color;
+				border-radius: 100%;
+				font-size: 2.3rem;
+				margin-right: 1.4rem;
+			}
+
+			.contact-content {
+				font-size: 1.45rem;
+				color: $white-color;
+				text-transform: uppercase;
+				flex-grow: 1;
+
+				&__txt {
+					margin-bottom: 0.5rem;
+				}
+
+				&__phone {
+					width: 100%;
+					background-color: $header-phone-color;
+					border-radius: 2rem;
+					padding: 7px 0;
+					font: {
+						weight: bold;
+						size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
+}
