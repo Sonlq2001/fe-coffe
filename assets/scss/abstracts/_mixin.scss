@@ -1,3 +1,30 @@
+// responsive
+
+@mixin pc() {
+	@media (max-width: 1199.98px) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media (max-width: 991.98px) {
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media (max-width: 767.98px) {
+		@content;
+	}
+}
+
+@mixin mobile-less() {
+	@media (max-width: 575.98px) {
+		@content;
+	}
+}
+
+// options
 @mixin box($width, $height) {
 	width: $width;
 	height: $height;
@@ -6,9 +33,21 @@
 @mixin row_header() {
 	text-align: center;
 
+	@include mobile {
+		padding-top: 0;
+	}
+
 	&__key {
 		font-size: 10.6rem;
 		font-weight: bold;
 		font-family: Josefin_Sans_bold;
+
+		@include mobile {
+			font-size: 9rem;
+		}
+
+		@include mobile-less {
+			font-size: 6rem;
+		}
 	}
 }

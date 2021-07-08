@@ -1,9 +1,21 @@
 .footer {
 	position: relative;
 	z-index: -1;
+	@include mobile-less {
+		z-index: 0;
+	}
+
 	.footer__map {
 		@include box(100%, 69rem);
 		z-index: -1;
+
+		@include tablet {
+			@include box(100%, 50rem);
+		}
+
+		@include mobile-less {
+			display: none;
+		}
 	}
 
 	.footer__info {
@@ -17,6 +29,17 @@
 		background-color: $white-color;
 		overflow: hidden;
 
+		@include tablet {
+			@include box(null, auto);
+			right: 9rem;
+		}
+
+		@include mobile-less {
+			position: static;
+			width: 100%;
+			transform: translateY(0);
+		}
+
 		.footer-info-header {
 			height: 8rem;
 			line-height: 8rem;
@@ -24,10 +47,18 @@
 			color: $white-color;
 			font-size: 3.5rem;
 			font-family: Josefin_Sans_bold;
+
+			@include tablet {
+				height: 6rem;
+				line-height: 6rem;
+			}
 		}
 
 		.footer-info-body {
 			padding: 5rem 1.5rem;
+			@include tablet {
+				padding: 3rem 1.5rem;
+			}
 
 			&__info {
 				font-size: 1.5rem;
@@ -60,12 +91,31 @@
 		font-size: 1.5rem;
 		color: #646464;
 
+		&__copy {
+			@include tablet {
+				text-align: center;
+			}
+
+			@include mobile-less {
+				font-size: 1.3rem;
+			}
+		}
+
 		&__nav {
 			display: flex;
 			line-height: 1.5rem;
 			height: 100%;
 			align-items: center;
 			margin-left: 4rem;
+
+			@include pc {
+				margin: 0;
+				justify-content: flex-end;
+			}
+
+			@include tablet {
+				display: none;
+			}
 
 			li + li {
 				margin-left: 1rem;

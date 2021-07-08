@@ -34,7 +34,31 @@
 						</a>
 
 						<nav class="header-nav">
+							<!-- nav mobile -->
+							<label
+								for="check-mobile"
+								class="bar-mobile xl-0 lg-0"
+							>
+								<i class="fas fa-mug-hot"></i>
+							</label>
+
+							<input type="checkbox" id="check-mobile" hidden />
+							<label
+								for="check-mobile"
+								class="overlay-mobile"
+							></label>
+
 							<ul class="header-list">
+								<label
+									for="check-mobile"
+									class="lg-0 xl-0 header-list-icon"
+								>
+									<img
+										src="./assets/images/close.png"
+										alt=""
+										class="header-list__close"
+									/>
+								</label>
 								<li class="header-item">
 									<a href="" class="header-item__link"
 										>giới thiệu</a
@@ -231,7 +255,7 @@
 					</div>
 
 					<div class="row">
-						<div class="xl-8">
+						<div class="xl-8 lg-8 md-12 sm-12">
 							<div class="service-left">
 								<div class="service-des">
 									<div class="active">
@@ -285,36 +309,38 @@
 								</div>
 							</div>
 						</div>
-						<div class="xl-4">
+						<div class="xl-4 lg-4 md-12 sm-12">
 							<div class="service-right">
-								<div class="service-right-title">
-									<span class="service-right-title__txt"
-										>Video Galley</span
-									>
-									<div
-										class="service-right-title__line"
-									></div>
-								</div>
+								<div class="service-right-group">
+									<div class="service-right-title">
+										<span class="service-right-title__txt"
+											>Video Galley</span
+										>
+										<div
+											class="service-right-title__line"
+										></div>
+									</div>
 
-								<div class="service-right-tag">
-									<span class="service-right-tag__item">
-										#Video
-									</span>
-									<span class="service-right-tag__item">
-										#Bigcoffe
-									</span>
-									<span class="service-right-tag__item">
-										#photo
-									</span>
-									<span class="service-right-tag__item">
-										#caffe
-									</span>
-									<span class="service-right-tag__item">
-										#nuochoaqua
-									</span>
-									<span class="service-right-tag__item">
-										#thueph
-									</span>
+									<div class="service-right-tag">
+										<span class="service-right-tag__item">
+											#Video
+										</span>
+										<span class="service-right-tag__item">
+											#Bigcoffe
+										</span>
+										<span class="service-right-tag__item">
+											#photo
+										</span>
+										<span class="service-right-tag__item">
+											#caffe
+										</span>
+										<span class="service-right-tag__item">
+											#nuochoaqua
+										</span>
+										<span class="service-right-tag__item">
+											#thueph
+										</span>
+									</div>
 								</div>
 
 								<div class="service-right-video">
@@ -436,7 +462,7 @@
 
 					<div class="list-blog">
 						<div class="row">
-							<div class="xl-2-5">
+							<div class="xl-2-5 lg-2-5 md-4 sm-6 col-6">
 								<div class="blog-item">
 									<img
 										src="./assets/images/photo1.jpg"
@@ -465,7 +491,7 @@
 								</div>
 							</div>
 
-							<div class="xl-2-5">
+							<div class="xl-2-5 lg-2-5 md-4 sm-6 col-6">
 								<div class="blog-item">
 									<img
 										src="./assets/images/photo2.jpg"
@@ -494,7 +520,7 @@
 								</div>
 							</div>
 
-							<div class="xl-2-5">
+							<div class="xl-2-5 lg-2-5 md-4 sm-6 col-6">
 								<div class="blog-item">
 									<img
 										src="./assets/images/photo3.jpg"
@@ -523,7 +549,7 @@
 								</div>
 							</div>
 
-							<div class="xl-2-5">
+							<div class="xl-2-5 lg-2-5 md-4 sm-6 col-6">
 								<div class="blog-item">
 									<img
 										src="./assets/images/photo4.jpg"
@@ -552,7 +578,7 @@
 								</div>
 							</div>
 
-							<div class="xl-2-5">
+							<div class="xl-2-5 lg-2-5 md-4 sm-6 col-6">
 								<div class="blog-item">
 									<img
 										src="./assets/images/photo1.jpg"
@@ -657,13 +683,13 @@
 				<div class="footer-end">
 					<div class="container">
 						<div class="row">
-							<div class="xl-6">
+							<div class="xl-6 lg-6 md-12 sm-12 col-12">
 								<div class="footer-end__copy">
 									Bản quyền thuộc vè BigCofe Copyright © 2020
 								</div>
 							</div>
 
-							<div class="xl-6">
+							<div class="xl-6 lg-6 md-0 sm-0 col-0">
 								<ul class="footer-end__nav">
 									<li>
 										<a href="">Bản đồ trang web</a>
@@ -701,7 +727,7 @@
 					600: {
 						items: 1,
 					},
-					1000: {
+					1200: {
 						items: 1,
 					},
 				},
@@ -713,12 +739,19 @@
 				nav: true,
 				responsive: {
 					0: {
-						items: 1,
+						items: 2,
+						margin: 10,
 					},
-					600: {
+					576: {
+						items: 2,
+					},
+					768: {
 						items: 3,
 					},
-					1000: {
+					992: {
+						items: 3,
+					},
+					1200: {
 						items: 4,
 					},
 				},
@@ -730,7 +763,20 @@
 				nav: true,
 				dots: false,
 				responsive: {
-					1000: {
+					0: {
+						items: 2,
+						margin: 10,
+					},
+					576: {
+						items: 2,
+					},
+					768: {
+						items: 3,
+					},
+					992: {
+						items: 3,
+					},
+					1200: {
 						items: 3,
 					},
 				},
